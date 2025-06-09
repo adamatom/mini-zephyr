@@ -1,0 +1,8 @@
+compatible: "myvendor,i2c-controller"
+description: "Minimal I2C controller for demo"
+include: base.yaml
+
+properties:
+  reg:
+    type: array
+    required: true

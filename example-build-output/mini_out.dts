@@ -1,0 +1,24 @@
+/dts-v1/;
+
+/* node '/' defined in ../dts/mini.dts:3 */
+/ {
+	compatible = "myvendor,miniboard"; /* in ../dts/mini.dts:4 */
+	#address-cells = < 0x1 >;          /* in ../dts/mini.dts:6 */
+	#size-cells = < 0x1 >;             /* in ../dts/mini.dts:7 */
+
+	/* node '/i2c@40003000' defined in ../dts/mini.dts:9 */
+	i2c0: i2c@40003000 {
+		compatible = "myvendor,i2c-controller"; /* in ../dts/mini.dts:10 */
+		reg = < 0x40003000 0x1000 >;            /* in ../dts/mini.dts:11 */
+		status = "okay";                        /* in ../dts/mini.dts:12 */
+		#address-cells = < 0x1 >;               /* in ../dts/mini.dts:14 */
+		#size-cells = < 0x0 >;                  /* in ../dts/mini.dts:15 */
+
+		/* node '/i2c@40003000/sensor@76' defined in ../dts/mini.dts:17 */
+		sensor@76 {
+			compatible = "myvendor,sensor"; /* in ../dts/mini.dts:18 */
+			reg = < 0x76 >;                 /* in ../dts/mini.dts:19 */
+			status = "okay";                /* in ../dts/mini.dts:20 */
+		};
+	};
+};

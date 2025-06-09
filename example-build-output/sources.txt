@@ -1,0 +1,2 @@
+/home/adam/projects/zephyr/zephyr-mini/Kconfig
+/home/adam/projects/zephyr/zephyr-mini/build/Kconfig.dts

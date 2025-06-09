@@ -1,0 +1,13 @@
+# Generated devicetree Kconfig
+#
+# SPDX-License-Identifier: Apache-2.0
+
+DT_COMPAT_MYVENDOR_I2C_CONTROLLER := myvendor,i2c-controller
+
+config DT_HAS_MYVENDOR_I2C_CONTROLLER_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_MYVENDOR_I2C_CONTROLLER))
+
+DT_COMPAT_MYVENDOR_SENSOR := myvendor,sensor
+
+config DT_HAS_MYVENDOR_SENSOR_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_MYVENDOR_SENSOR))

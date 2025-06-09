@@ -1,0 +1,5 @@
+compatible: "myvendor,sensor"
+description: "Minimal I2C device for demo"
+include: i2c-device.yaml
+
+

@@ -1,0 +1,15 @@
+mainmenu "Fake zephyr Configuration"
+
+menu "Devicetree Info"
+
+osource "${KCONFIG_BINARY_DIR}/Kconfig.dts"
+
+endmenu
+
+menu "Applications"
+
+config DEMO_I2C_APP
+    bool "Enable I2C Demo App"
+    default y if $(dt_compat_enabled,$(DT_HAS_MYVENDOR_SENSOR_ENABLED))
+
+endmenu

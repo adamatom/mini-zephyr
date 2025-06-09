@@ -1,0 +1,23 @@
+/dts-v1/;
+
+/ {
+    compatible = "myvendor,miniboard";
+
+    #address-cells = <1>;
+    #size-cells = <1>;
+
+    i2c0: i2c@40003000 {
+        compatible = "myvendor,i2c-controller";
+        reg = <0x40003000 0x1000>; // <- must match #address-cells/#size-cells
+        status = "okay";
+
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        sensor@76 {
+            compatible = "myvendor,sensor";
+            reg = <0x76>;
+            status = "okay";
+        };
+    };
+};
